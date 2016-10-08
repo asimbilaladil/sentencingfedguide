@@ -1,12 +1,7 @@
 <div class="responsive-header">
 	<div class="topbar">
 		<div class="container">
-			<ul class="top-social">
-				<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-				<li><a href="#" title=""><i class="fa fa-linkedin"></i></a></li>
-			</ul><!-- Top Social -->
+			<!-- Top Social -->
 			<div class="pull-right">
 				<ul class="contact-information">
 					<li><i class="fa fa-phone"></i>Tel: 0056 764 234 5621</li>			
@@ -21,7 +16,7 @@
 	</div><!-- Top Bar -->	
 
 	<div class="responsive-logo">
-		<a href="#" title=""><img src="home-images/logo.png" alt="Logo" /></a>
+		<a href="#" title=""><img src="<?php echo base_url("assets/images/logo.jpg") ?>" alt="Logo" /></a>
 	</div><!-- Responsive Logo -->	
 	<span><i class="fa fa-align-justify"></i></span>
 	<ul>
@@ -37,13 +32,13 @@
 				<div class="col-md-12">
 					<div class="resume">
 						<div class="row">
-							<div class="col-md-8 column">
-								<h5><?php echo $user_profile['name']; ?></h5>
+							<div class="col-md-9 column">
+								<h5 style="font-weight: bold; font-size: -webkit-xxx-large;"><?php echo $user_profile['name']; ?></h5>
 								<h4>Title</h4>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euistincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamnostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
 
 							</div>
-							<div class="col-md-4 column">
+							<div class="col-md-3 column">
 								<div class="resume-img">
 									<img src="<?php echo 'https://graph.facebook.com/'. $user_profile['id'] .'/picture?type=large' ?>" alt="">
 								</div>
