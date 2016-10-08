@@ -18,3 +18,21 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/home-css/colors/color.css") ?>" title="color1" />
 </head>
+
+<header class="header4">
+    <div class="menu">
+        <div class="logo">
+            <a href="#" title=""><img src="<?php echo base_url("assets/home-images/logo.png") ?>" alt="" /></a>
+        </div><!-- Logo -->
+        <div class="full-navigation">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#" title=""><i class="fa fa-home"></i>Home</a>
+    
+                    </ul>
+                </nav><!-- Navigation -->
+            </div>
+        </div>
+    </div><!-- Menu -->
+</header><!-- Header -->
