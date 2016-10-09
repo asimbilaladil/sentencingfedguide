@@ -22,7 +22,7 @@
 <header class="header4">
     <div class="menu">
         <div class="logo">
-            <a href="#" title=""><img style="height: 150px;" src="<?php echo base_url("assets/images/logo.jpg") ?>" alt="" /></a>
+            <a href="#" title=""><img style="height: 150px;" src="<?php echo base_url("assets/images/logo.png") ?>" alt="" /></a>
         </div><!-- Logo -->
         <div class="full-navigation">
             <div class="container">
