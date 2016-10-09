@@ -33,9 +33,15 @@
 					<div class="resume">
 						<div class="row">
 							<div class="col-md-9 column">
-								<h5 style="font-weight: bold; font-size: -webkit-xxx-large;"><?php echo $user_profile['name']; ?></h5>
-								<h4>Title</h4>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euistincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamnostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
+								<h5  style="font-weight: bold; font-size: -webkit-xxx-large;"><?php echo $user_profile['name']; ?></h5>
+								<h4 class="user-title">Title <i class="ghostPencil"></i></h4>
+
+								<div class="col-md-12   user-description"  style="padding-left: 5px">
+									<p> 
+										<i class="description-edit"> &nbsp;</i> 
+										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euistincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamnostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.
+									</p>
+								</div>
 
 							</div>
 							<div class="col-md-3 column">

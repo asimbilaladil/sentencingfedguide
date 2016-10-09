@@ -7397,6 +7397,27 @@ a.color {
     background: #db843d; 
 }
 
+.description-edit{ 
+display: none;
+}
+.user-description :hover .description-edit{
+    display : block;
+    font-size: 8pt; 
+    font-family: tahoma; 
+    margin-top: 1px; 
+    margin-right: 2px; 
+    position:absolute; 
+    top:0; 
+    right:0;
+    background:url("http://cdn1.iconfinder.com/data/icons/twotiny_expansion/icons/pencil2.gif") no-repeat right; 
+    padding-right:15px;
+    cursor:pointer;
+    float:left: width: 200px
+}
+
+.user-title:hover
+.ghostPencil {background:url("http://cdn1.iconfinder.com/data/icons/twotiny_expansion/icons/pencil2.gif") no-repeat right; padding-right:15px;cursor:pointer;float:left: width: 200px}
+
 /*** ==============================================================
             ANIMATIONS
 ============================================================== ***/
