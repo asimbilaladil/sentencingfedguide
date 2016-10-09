@@ -16,7 +16,7 @@
 	</div><!-- Top Bar -->	
 
 	<div class="responsive-logo">
-		<a href="#" title=""><img src="<?php echo base_url("assets/images/logo.jpg") ?>" alt="Logo" /></a>
+		<a href="#" title=""><img src="<?php echo base_url("assets/images/logo.png") ?>" alt="Logo" /></a>
 	</div><!-- Responsive Logo -->	
 	<span><i class="fa fa-align-justify"></i></span>
 	<ul>
