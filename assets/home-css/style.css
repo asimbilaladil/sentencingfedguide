@@ -7417,7 +7417,16 @@ display: none;
 
 .user-title:hover
 .ghostPencil {background:url("http://cdn1.iconfinder.com/data/icons/twotiny_expansion/icons/pencil2.gif") no-repeat right; padding-right:15px;cursor:pointer;float:left: width: 200px}
+@media screen and (max-width: 980px) {
+    .user-description :hover .description-edit{
 
+        margin-top: 90px; 
+
+    }
+}
+.topSpace {
+    top: 4px;
+}
 /*** ==============================================================
             ANIMATIONS
 ============================================================== ***/

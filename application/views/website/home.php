@@ -34,12 +34,16 @@
 						<div class="row">
 							<div class="col-md-9 column">
 								<h5  style="font-weight: bold; font-size: -webkit-xxx-large;"><?php echo $user_profile['name']; ?></h5>
-								<h4 class="user-title">Title <i class="ghostPencil"></i></h4>
+								<h4 class="user-title">Title <a href="" data-toggle="modal" data-target="#editTitleModal" ><i class="ghostPencil"></i></a></h4>
+
 
 								<div class="col-md-12   user-description"  style="padding-left: 5px">
-									<p> 
-										<i class="description-edit"> &nbsp;</i> 
-										Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euistincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamnostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.
+									
+									<p>
+										<a href="" data-toggle="modal" data-target="#editDescriptionModal" > 
+											<i class="description-edit"> &nbsp;</i> 
+										</a>
+										 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euistincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniamnostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.
 									</p>
 								</div>
 
@@ -89,3 +93,47 @@
 
 
         </section>
+<!-- Modal -->
+<div id="editTitleModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Title Edit</h4>
+      </div>
+      <div class="modal-body">
+      	<label class="col-md-2 topSpace">Title:</label>
+        <input class="col-md-6 topSpace" type="text" name="editTitle">
+		&nbsp;&nbsp;
+        <button type="button" class=" btn btn-success" data-dismiss="modal">Save</button>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>    
+<!-- Modal -->
+<div id="editDescriptionModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Description Edit</h4>
+      </div>
+      <div class="modal-body">
+      	<label class="col-md-3 topSpace">Description:</label>
+        <input class="col-md-6 topSpace" type="text" name="editDescription">
+		&nbsp;&nbsp;
+        <button type="button" class=" btn btn-success" data-dismiss="modal">Save</button>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>    
