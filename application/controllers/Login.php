@@ -8,7 +8,7 @@ class Login extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
-        $this->load->library('facebook', array('appId' => '1746238735630300', 'secret' => 'afed1612b79712ea6b3ead1394bd489e'));
+        $this->load->library('facebook', array('appId' => '1817748195152831', 'secret' => '93fd508813778a9dcc2fd64a4c1c05d0'));
         $this->user = $this->facebook->getUser();
         $this->load->model('UserModel');
     }
