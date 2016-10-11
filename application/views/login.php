@@ -7,7 +7,7 @@
   
   <div class="box-shadow-for-ui">
     <div class="uou-block-2b">
-      <div class="container"> <a href="index.html#" class="logo"><img src="<?php echo base_url("assets/images/logo.jpg") ?>" alt=""></a> <a href="index.html#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
+      <div class="container"> <a href="index.html#" class="logo"><img src="<?php echo base_url("assets/images/logo.jpg") ?>" alt=""></a>
        </div>
     </div>
     <!-- end .uou-block-2b --> 
@@ -92,9 +92,9 @@
       </div>
       <form action="<?php echo site_url('Login/register') ?>" method="POST">
       <div class="modal-body">
-                      <input style="color:black;" type="text" name="fullname" placeholder="Full Name">
-                      <input style="color:black;" type="email"  name="email" placeholder="Email Address">
-                      <input style="color:black;" type="password" name="password" placeholder="Password">
+                      <input style="color:black;" type="text" name="fullname" placeholder="Full Name" required="">
+                      <input style="color:black;" type="email"  name="email" placeholder="Email Address" required="">
+                      <input style="color:black;" type="password" name="password" placeholder="Password" required="">
       </div>
       <div class="modal-footer">
         <input type="submit" class="btn btn-primary"  style="border-radius: 20px; width: 22%;" value="Save">
