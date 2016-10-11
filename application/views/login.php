@@ -8,30 +8,7 @@
   <div class="box-shadow-for-ui">
     <div class="uou-block-2b">
       <div class="container"> <a href="index.html#" class="logo"><img src="<?php echo base_url("assets/images/logo.jpg") ?>" alt=""></a> <a href="index.html#" class="mobile-sidebar-button mobile-sidebar-toggle"><span></span></a>
-        <nav class="nav">
-          <ul class="sf-menu">
-           
-            <li>
-              <i class="fa  fa-phone "> <strong>+1 (406)-208-0484</strong></i>
-              <br>
-              <span>
-              <i class="fa fa-envelope"> info@sentencingfedguide.com </i>
-              </span>
-            </li>
-            <li>
-              <i class="fa  fa-map-marker "> <strong>1333 N 27th St </strong></i>
-              <br>
-              <span>Billings, MT 59101.</span>
-
-      
-            </li>
-
-
-
-    
-          </ul>
-        </nav>
-      </div>
+       </div>
     </div>
     <!-- end .uou-block-2b --> 
   </div>
@@ -84,7 +61,7 @@
                       <br><br>
                         </form>
                         <form>
-                      <div style="margin-top: 12px; margin-bottom: -20px;" >Don't have an account? <a data-toggle="modal" data-target="#myModal">Sign up</a></div>
+                      <div style="margin-top: -30px; margin-bottom: -20px;" >Don't have an account? <a data-toggle="modal" data-target="#myModal">Sign up</a></div>
 
                       <div class="forget">
                         <a href="<?php echo $login_url ?>">
@@ -110,7 +87,7 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
         <h4 class="modal-title">Signup</h4>
       </div>
       <form action="<?php echo site_url('Login/register') ?>" method="POST">
