@@ -17,6 +17,7 @@
 <link href="<?php echo base_url("assets/home-css/responsive.css") ?>" rel="stylesheet" type="text/css" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/home-css/colors/color.css") ?>" title="color1" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </head>
 
 <header class="header4">

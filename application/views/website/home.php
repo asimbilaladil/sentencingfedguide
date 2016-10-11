@@ -51,6 +51,9 @@
                             <div class="col-md-3 column">
                                 <div class="resume-img">
                                     <img src="<?php echo 'https://graph.facebook.com/'. $data['user']->facebook_id .'/picture?type=large' ?>" alt="">
+                                    <button class="upload-button" style=" color: white; width:40%; background-color: #ff7c00; position: absolute; top: 40%; left: 30%; ">upload</button>
+                                        
+
                                 </div>
                             </div>
                         </div>
@@ -126,7 +129,7 @@
       </div>
       <div class="modal-body">
         <label class="col-md-3 topSpace">Description:</label>
-        <input class="col-md-6 topSpace" type="text" name="description">
+        <input class="col-md-6 topSpace" type="text" name="description" value="<?php echo $data['user']->description ?>">
         <input type="hidden" name="email" value="<?php echo $data['user']->email ?>" />
         &nbsp;&nbsp;
         <input type="submit" class=" btn btn-success" value="Save" />
@@ -135,3 +138,19 @@
 </form>
   </div>
 </div>    
+
+
+<script type="text/javascript">
+    
+jQuery(function() {    
+
+    jQuery(".upload-button").hide();
+    jQuery('.resume-img').hover(function() {
+         jQuery(this).find('.upload-button').fadeIn(1500);
+    }, function() {
+        jQuery(this).find('.upload-button').fadeOut(1000); 
+    });
+}); 
+
+
+</script>

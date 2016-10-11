@@ -231,4 +231,9 @@ $(window).load(function(){
     /*** PARALLAX INITIALIZATION ***/   
     $('.parallax').scrolly({bgParallax: true});
     $('.service-parallax').scrolly({bgParallax: true});
-});/*=== Window.Load Ends Here ===*/         
+});/*=== Window.Load Ends Here ===*/    
+
+
+
+
+    
