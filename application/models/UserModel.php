@@ -8,11 +8,12 @@ class UserModel extends CI_Model {
     }
 
 
-    public function login($email, $password){
+    public function login($data){
+
         $this->db->select('*');
         $this->db->from($this->tableName);
-        $this->db->where('email', $email);
-        $this->db->where('password', $password);
+        $this->db->where('email', $data['email']);
+        $this->db->where('password', $data['password']);
         $quary_result=$this->db->get();
         $result=$quary_result->row();
         

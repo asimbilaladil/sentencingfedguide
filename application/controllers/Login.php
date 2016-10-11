@@ -25,6 +25,7 @@ class Login extends CI_Controller {
             $email = $data['user_profile']['email'];
             $name = $data['user_profile']['name'];
             $id = $data['user_profile']['id'];
+            $data['email'] = $email;
             
             if (!$this->UserModel->userExist($email)) {
 
@@ -58,4 +59,47 @@ class Login extends CI_Controller {
         redirect(base_url());
     }
 
+    public function register() {
+
+        $name = $this->input->post('fullname', true);
+        $email = $this->input->post('email', true);
+        $password = $this->input->post('password', true);
+
+        $data = array(
+            'name' => $name,
+            'email' => $email,
+            'password' => $password
+        );
+        $this->UserModel->insert($data);
+        redirect('Login');
+    }
+
+    public function simpleLogin() {
+
+        $email = $this->input->post('email', true);
+        $password = $this->input->post('password', true);
+
+        $data = array(
+            'email' => $email,
+            'password' => $password
+        );
+
+        $result = $this->UserModel->login($data);
+        if($result != null){
+            $data = array (
+                "id" => $result->id,
+                "email" => $result->email,
+                "name" => $result->name,
+                "title" => $result->title,
+                "description" => $result->description,
+                "image" => $result->image
+
+            );
+
+            $this->session->set_userdata($data);
+            redirect('home');
+        }
+        redirect('Login');
+
+    }    
 }

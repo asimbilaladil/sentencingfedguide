@@ -29,6 +29,7 @@
                 <nav>
                     <ul>
                         <li><a href="#" title=""><i class="fa fa-home"></i>Home</a>
+                        <li><a href="<?php echo site_url("Login/logout") ?>" title=""><i class="fa fa-door"></i>Logout</a>
     
                     </ul>
                 </nav><!-- Navigation -->

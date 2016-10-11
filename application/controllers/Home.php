@@ -8,7 +8,7 @@ class Home extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
-        $data = $this->session->userdata('user_profile');
+        $data = $this->session->userdata('email');
         if( $data != NULL ) {
 
         } else {
@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 
     public function index() {
 
-        $email = $this->session->userdata('user_profile')['email'];
+        $email = $this->session->userdata('email');
 
         $user = $this->UserModel->userExist($email);
 

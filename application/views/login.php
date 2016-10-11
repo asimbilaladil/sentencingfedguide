@@ -77,10 +77,14 @@
                   
                   <!-- LOGIN -->
                   <div id="log-in" class="active">
-                    <form>
-                      <input type="email" placeholder="Email Address">
-                      <input type="password" placeholder="Password">
+                    <form action="<?php echo site_url('Login/simpleLogin') ?>" method="POST" >
+                      <input type="email" placeholder="Email Address" name="email">
+                      <input type="password" placeholder="Password" name="password">
                       <button style="width: 100%;" type="submit">Login</button>
+                      <br><br>
+                        </form>
+                        <form>
+                      <div style="margin-top: 12px; margin-bottom: -20px;" >Don't have an account? <a data-toggle="modal" data-target="#myModal">Sign up</a></div>
 
                       <div class="forget">
                         <a href="<?php echo $login_url ?>">
@@ -89,12 +93,7 @@
                       </div>
                     </form>
                   </div>
-                  <div id="forget">
-                    <form>
-                      <input type="email" placeholder="Email Address">
-                      <button type="submit">Login</button>
-                    </form>
-                  </div>
+        
                 </div>
               </div>
             </div>
@@ -102,3 +101,29 @@
         </div>
       </div>
     </div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog " style="width: 40%">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Signup</h4>
+      </div>
+      <form action="<?php echo site_url('Login/register') ?>" method="POST">
+      <div class="modal-body">
+                      <input style="color:black;" type="text" name="fullname" placeholder="Full Name">
+                      <input style="color:black;" type="email"  name="email" placeholder="Email Address">
+                      <input style="color:black;" type="password" name="password" placeholder="Password">
+      </div>
+      <div class="modal-footer">
+        <input type="submit" class="btn btn-primary"  style="border-radius: 20px; width: 22%;" value="Save">
+      </div>
+      </form>
+    </div>
+
+  </div>
+</div> 
