@@ -49,11 +49,12 @@
 
                             </div>
                             <div class="col-md-3 column">
+                                <form action="<?php echo site_url('Home/upload') ?>" id="uploadImageForm" method="POST" enctype="multipart/form-data">
                                 <div class="resume-img">
-                                    <img src="<?php echo 'https://graph.facebook.com/'. $data['user']->facebook_id .'/picture?type=large' ?>" alt="">
-                                    <button class="upload-button" style=" color: white; width:40%; background-color: #ff7c00; position: absolute; top: 40%; left: 30%; ">upload</button>
-                                        
-
+                                    <img src="<?php echo ($data['user']->image ? base_url() . $data['user']->image : 'https://graph.facebook.com/'. $data['user']->facebook_id .'/picture?type=large') ?>" alt="">
+                                    <input type="file" name="image" id="image" class="upload-button" style=" color: white; width:40%; background-color: #ff7c00; position: absolute; top: 40%; left: 30%; " />
+                                    <input type="hidden" name="email" value="<?php echo $data['user']->email ?>" />
+                                </form>
                                 </div>
                             </div>
                         </div>
@@ -152,5 +153,8 @@ jQuery(function() {
     });
 }); 
 
+$('#image').change(function() {
+  $('#uploadImageForm').submit();
+});
 
 </script>
