@@ -10,12 +10,9 @@
                                     <div class="col-md-10">
                                         <aside class="sidebar">
                                             <div class="widget">
-                                                <h4 class="widget-title">SEARCH</h4>
+                                                <h4 class="widget-title">Output</h4>
                                                 <!-- Widget Title -->
-                                                <form class="search">
-                                                    <button><i class="fa fa-search"></i></button>
-                                                    <input type="text" placeholder="Enter Your Keyword">
-                                                </form>
+                                               
                                                 <!-- Search Form -->								
                                             </div>
                                             <!-- Widget -->
