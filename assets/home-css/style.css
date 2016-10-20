@@ -5858,7 +5858,7 @@ h4.widget-title:before {
     color: #888888;
     font-size: 13px;
     line-height: 30px;
-    padding: 12px 0;
+    padding: 5px 0;
     float: left;
     width: 100%;
 }
@@ -5879,13 +5879,17 @@ h4.widget-title:before {
     -o-transition:all 0.3s linear;
     transition:all 0.3s linear;
 }
+.widget ul li span:focus {
+    background-color: #ff7c00;
+}
 .widget ul li span {
     background: none repeat scroll 0 0 #f9f9f9;
     color: #888888;
-    float: right;
+    float: left;
     font-size: 12px;
     line-height: 24px;
     padding: 3px 10px;
+    width: 65%;
 
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
