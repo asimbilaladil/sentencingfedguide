@@ -89,7 +89,7 @@
                             <div class="col-md-6 column">
                                 <div class="col-md-3">
                                 </div>
-                                    <button style="background-color: #ff7c00" type="button" class="col-md-6 btn btn-success">Full Formal Report</button>
+                                    <a href="<?php echo site_url("Report") ?>"><button style="background-color: #ff7c00" type="button" class="col-md-6 btn btn-success">Full Formal Report</button></a>
 
 
                             </div>                      
