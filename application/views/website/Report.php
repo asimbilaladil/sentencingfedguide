@@ -1,3 +1,12 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script> 
+function loadHtml(fileName,div) {
+   $(function(){
+    $("#displayForm"+div).load("http://localhost/sentencingfedguide/forms/"+ fileName+ ".html");
+   });  
+}
+
+</script>
         <section class="inner-page">
             <section>
                 <div class="block extra-gap">
@@ -69,158 +78,9 @@
                                                     </form>
                                                 </div>    
                                                 <div id="dynamicindent">
-                                                <div>
-                                                    <div class="form-group">
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="optradio">Prohibited Person
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="optradio">Entering Airplane
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                             <input type="radio" name="optradio">Non-Prohibited Person
-                                                        </label>
-                                                    </div>
-                                                     <br>
-                                                    <div class="form-group">
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Prohibited Person with 1 Drug/Violent Felony
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Prohibited Person with 2 or More Felonies 
-                                                        </label>                                                        
-                                                    </div>
-                                                     <br>
 
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Select the Nature of the Weapon:</label>
-                                                        <div class="col-sm-6">
-                                                            <select class="form-control" id="sel1">
-                                                                <option>Semi-Auto Assault Rifle/ Large Capacity Magazine</option>
-                                                                <option>Full-Auto Machine Gun</option>
-                                                                <option>Sawed-Off Shotgon, Shortened Weapon or Silencer</option>
-                                                                <option>Stolen Gun</option>
-                                                                <option>No Serial #</option>
-                                                                <option>Clandestine(hidden) Gun</option>
-                                                                <option>Ceramic or Other Non-Detectable Weaopon</option>
-                                                                <option>Ammunition</option>
-                                                                <option>Body Armor</option>
-                                                                <option>Mailed Items Intended to Harm</option>
-                                                                <option>Hunting/Sporting Rifle</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                     <br> <br>
+                                                    <div id="displayForm">
 
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">How Many Guns:</label>
-                                                        <div class="col-sm-3">
-                                                            <select class="form-control" id="sel1">
-                                                                <option>1-2</option>
-                                                                <option>3-7</option>
-                                                                <option>8-24</option>
-                                                                <option>25-99</option>
-                                                                <option>100-199</option>
-                                                                <option>200+</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>  
-                                                      <br> <br>                                                  
-                                                    <div class="form-group col-sm-12">
-                                                        <label class="control-label " for="email">What is the Nature of the Situation:</label>
-                                                    </div>   
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Was the Gun Used to Commit Another Felony?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div>                                                  
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Was the Gun Used in Trafficking?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div>                                                         
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Was the Gun Used in a School Zone or Federal Building?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div>                                                         
-                                           
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Provided Weapon to Prohibited Person?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div> 
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Misrepresented Information During Gun Purchase?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div> 
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Weapon Used in Sporting?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div> 
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Falsifying Documentation?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Shipping Weapon without License?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div>                                                                                                    
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Not Waiting Full 60 or 90 Days?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-6" for="email">Background Violation in Purchasing Weapon?</label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">Yes
-                                                        </label>
-                                                        <label class="radio-inline">
-                                                            <input type="radio" name="child">No 
-                                                        </label>                                                        
                                                     </div>                                                                
                                                 </div>
 
