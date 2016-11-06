@@ -313,17 +313,24 @@
     }
     
     var getFormChildNode = function getFormChildNode(id) {
-        
-        $.post('<?php echo site_url('Report/getForm') ?>', {
+
+        $.get('<?php echo site_url('Report/getForm') ?>', {
             id : id
         }, function(data) {
+            data = JSON.parse(data);
+            if ( data.length > 0 ) {
+                console.log(data)
+                var filename = data[0].fileName;
+                var htmlDiv = data[0].html_div_id;
+                loadHtml(filename, htmlDiv);
 
+            }
         });  
 
     }
 
     function loadHtml(fileName, div) {
-        $("#" + div).load("http://localhost/sentencingfedguide/forms/" + fileName);
+        $("#" + div).load("<?php echo base_url('forms/');  ?>" + fileName);
     }
 
 </script>
