@@ -1,10 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script> 
-function loadHtml(fileName,div) {
-   $(function(){
-    $("#displayForm"+div).load("http://localhost/sentencingfedguide/forms/"+ fileName+ ".html");
-   });  
-}
+
 
 </script>
         <section class="inner-page">
@@ -297,31 +293,37 @@ function loadHtml(fileName,div) {
 
     }
 
-    var getForm = function getForm(){
+    var getForm = function getForm() {
         var selectBox = document.getElementById("selectBox");
         var id = selectBox[selectBox.selectedIndex].value
-        $.post('<?php echo site_url('Report/getForm') ?>', {
+        $.get('<?php echo site_url('Report/getForm') ?>', {
             id : id
         }, function(data) {
+            data = JSON.parse(data);
+            if ( data.length > 0 ) {
+                var filename = data[0].fileName;
+                var htmlDiv = data[0].html_div_id;
 
+                loadHtml(filename, htmlDiv);
+
+            }
      
         });  
-  
-            
 
     }
     
-    var getFormChildNode = function getFormChildNode(id){
+    var getFormChildNode = function getFormChildNode(id) {
         
         $.post('<?php echo site_url('Report/getForm') ?>', {
             id : id
         }, function(data) {
 
-                    
         });  
-  
-            
 
+    }
+
+    function loadHtml(fileName, div) {
+        $("#" + div).load("http://localhost/sentencingfedguide/forms/" + fileName);
     }
 
 </script>
