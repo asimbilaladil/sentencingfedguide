@@ -49,7 +49,7 @@ function loadHtml(fileName,div) {
                                                         <input class="noblur" type="text" name="answersection" id="q6c261a06c5b41d0section" size="10">
                                                         <input type="submit" id="q6c261a06c5b41d0submit" name="q6c261a06c5b41d0submit" value="OK">
                                                         (or, 
-                                                        <select id="q6c261a06c5b41d0codepick" class="codepick">
+                                                        <select onchange="getForm()" id="selectBox" class="codepick">
                                                             <option value="" selected="selected">Pick from frequent statutes</option>
                                                             <option value="8_1324(a)">Alien smuggling</option>
                                                             <option value="18_2113(a)">Bank robbery</option>
@@ -71,7 +71,7 @@ function loadHtml(fileName,div) {
                                                             <option value="8_1326(b)">Reentry following removal</option>
                                                             <option value="18_2251(a)">Sexual exploitation of minors</option>
                                                             <option value="18_1343">Wire fraud</option>
-                                                            <option value="18_1343">Weapon</option>
+                                                            <option value="2">Weapon</option>
                                                         </select>
                                                         )
                                                         <input type="hidden" id="q6c261a06c5b41d0hidden" name="question" value="6c261a06c5b41d0">
@@ -297,7 +297,33 @@ function loadHtml(fileName,div) {
 
     }
 
+    var getForm = function getForm(){
+        var selectBox = document.getElementById("selectBox");
+        var id = selectBox[selectBox.selectedIndex].value
+        $.post('<?php echo site_url('Report/getForm') ?>', {
+            id : id
+        }, function(data) {
 
+     
+        });  
+  
+            
 
+    }
+    
+    var getFormChildNode = function getFormChildNode(id){
+        
+        $.post('<?php echo site_url('Report/getForm') ?>', {
+            id : id
+        }, function(data) {
+
+                    
+        });  
+  
+            
+
+    }
 
 </script>
+
+

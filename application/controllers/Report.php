@@ -8,7 +8,7 @@ class Report extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
-
+		$this->load->model('ReportModel');
     }
 
     public function index() {
@@ -20,5 +20,12 @@ class Report extends CI_Controller {
         $this->load->view('common_secondary/footer');
     }
 
+
+    public function getForm() {
+
+        $id = $this->input->post('id', true); 
+        $result = $this->ReportModel->getFormById($id);
+   		echo json_encode($result);
+    } 
 
 }
