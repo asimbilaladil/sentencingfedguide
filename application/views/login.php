@@ -48,7 +48,7 @@
                       <input type="text" placeholder="Phone">
                       <input type="password" placeholder="Password">
                       <button type="submit">Register</button>
-                      <div class="login-with"> <span>Or login with:</span> <a href="index.html#."><i class="fa fa-facebook"></i></a> <a href="<?php echo $login_url ?>"><i class="fa fa-google"></i></a> <a href="<?php echo $login_url ?>"><i class="fa fa-linkedin"></i></a> </div>
+                      <div  class="login-with" > <span>Or login with:</span> <a href="index.html#."><i class="fa fa-facebook"></i></a> <a href="<?php echo $login_url ?>"><i class="fa fa-google"></i></a> <a href="<?php echo $login_url ?>"><i class="fa fa-linkedin"></i></a> </div>
                     </form>
                   </div>
                   
@@ -57,14 +57,14 @@
                     <form action="<?php echo site_url('Login/simpleLogin') ?>" method="POST" >
                       <input type="email" placeholder="Email Address" name="email">
                       <input type="password" placeholder="Password" name="password">
-                      <button style="width: 100%;" type="submit">Login</button>
+                      <button class="disable-links" style="width: 100%;" type="submit">Login</button>
                       <br><br>
                         </form>
                         <form>
-                      <div style="margin-top: -30px; margin-bottom: -20px;" >Don't have an account? <a data-toggle="modal" data-target="#myModal">Sign up</a></div>
+                      <div  class="disable-links" style="margin-top: -30px; margin-bottom: -20px;" >Don't have an account? <a data-toggle="modal" data-target="#myModal">Sign up</a></div>
 
                       <div class="forget">
-                        <a href="<?php echo $login_url ?>">
+                        <a class="disable-links" href="<?php echo $login_url ?>">
                           <img class="mc-btn col-md-12" style="padding: 0px 0px;  height: 44px; border-radius: 40px; " src="http://royalrealtybillings.com/assets/images/facebookButton.png">
                           </a>
                       </div>
@@ -104,3 +104,10 @@
 
   </div>
 </div> 
+<style type="text/css">
+  
+.disable-links {
+    pointer-events: none;
+}
+
+</style>
