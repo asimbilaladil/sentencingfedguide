@@ -359,6 +359,7 @@ table#summary td.other h5 {
     }
 
     var getForm = function getForm() {
+
         var selectBox = document.getElementById("selectBox");
         var id = selectBox[selectBox.selectedIndex].value
         $.get('<?php echo site_url('Report/getForm') ?>', {
@@ -377,13 +378,8 @@ table#summary td.other h5 {
 
     }
     
-    var getFormChildNode = function getFormChildNode(id, this) {
+    var getFormChildNode = function getFormChildNode(id) {
         
-        var radioButtonId = this.id;
-        console.log(radioButtonId)
-        if(!document.getElementById(radioButtonId).checked ) {
-            console.log("Unchecked")
-        }
         $.get('<?php echo site_url('Report/getForm') ?>', {
             id : id
         }, function(data) {
