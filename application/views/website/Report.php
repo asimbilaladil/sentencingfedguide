@@ -1,3 +1,39 @@
+
+<style type="text/css">
+    table#summary {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+table#summary td#months h5 {
+    font-size: 1cm;
+    color: white;
+}
+table#summary td h6 {
+    font-size: 120%;
+
+}
+table#summary td#months {
+    background-color: rgba(0, 104, 151, 0.62);
+    vertical-align: top;
+    color: #FFF;
+    padding: 2em
+}
+table#summary td.other h5 {
+    font-size: .8cm;
+    font-weight: 400;
+}
+
+    table#summary td.other {
+    vertical-align: top;
+    border-top: 2px solid #e8e8e8;
+    border-right: 2px solid #e8e8e8;
+    color: #333;
+    margin: 0;
+    padding: 2.5em;
+    padding-left: 3em;;
+}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script> 
 
@@ -16,6 +52,35 @@
                                         <aside class="sidebar">
                                             <div class="widget">
                                                 <h4 class="widget-title">Output</h4>
+                                                <div id="reportspot">
+                                                    <table id="summary">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td id="months">
+                                                                <h6 style="color: white;">Months:</h6>
+                                                                    <h5>0-6</h5>
+                                                                </td>
+                                                                <td class="other">
+                                                                    <h6>Zone:</h6>
+                                                                    <h5 title="a sentence of imprisonment is not required">A</h5>
+                                                                </td>
+                                                                <td class="other">
+                                                                    <h6>Level:</h6>
+                                                                    <h5>6</h5>
+                                                                </td>
+                                                                <td class="other">
+                                                                    <h6>History:</h6>
+                                                                    <h5>I</h5>
+                                                                </td>
+                                                                <td class="other last">
+                                                                    <h6>Fine:</h6>
+                                                                    <h5>$500 to $5,000</h5>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+
+                                                    </table>
+                                                 </div>
                                                 <!-- Widget Title -->
                                                
                                                 <!-- Search Form -->								
@@ -312,8 +377,13 @@
 
     }
     
-    var getFormChildNode = function getFormChildNode(id) {
-
+    var getFormChildNode = function getFormChildNode(id, this) {
+        
+        var radioButtonId = this.id;
+        console.log(radioButtonId)
+        if(!document.getElementById(radioButtonId).checked ) {
+            console.log("Unchecked")
+        }
         $.get('<?php echo site_url('Report/getForm') ?>', {
             id : id
         }, function(data) {
