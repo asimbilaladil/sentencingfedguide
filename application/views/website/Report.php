@@ -58,19 +58,19 @@ table#summary td.other h5 {
                                                             <tr>
                                                                 <td id="months">
                                                                 <h6 style="color: white;">Months:</h6>
-                                                                    <h5>0-6</h5>
+                                                                    <h5 id="sentenceMonth">0-6</h5>
                                                                 </td>
                                                                 <td class="other">
                                                                     <h6>Zone:</h6>
-                                                                    <h5 title="a sentence of imprisonment is not required">A</h5>
+                                                                    <h5 id="zone" title="a sentence of imprisonment is not required">A</h5>
                                                                 </td>
                                                                 <td class="other">
                                                                     <h6>Level:</h6>
-                                                                    <h5>6</h5>
+                                                                    <h5 id="level">6</h5>
                                                                 </td>
                                                                 <td class="other">
                                                                     <h6>History:</h6>
-                                                                    <h5>I</h5>
+                                                                    <h5 id="historyText">I</h5>
                                                                 </td>
                                                                 <td class="other last">
                                                                     <h6>Fine:</h6>
@@ -170,14 +170,14 @@ table#summary td.other h5 {
                                                         <form method="POST" action="/dynamic/" name="q4616a3e9346352f3form" id="q4616a3e9346352f3form" class="question contextd63f" >
                                                             <label for="q4616a3e9346352f3select">What is the defendant's Criminal History Category?</label>
                                                             <br>
-                                                            <select name="answer" id="q4616a3e9346352f3select">
-                                                                <option value="1">I (0 or 1 points) &nbsp;</option>
-                                                                <option value="2">II (2 or 3 points) &nbsp;</option>
-                                                                <option value="3">III (4, 5, or 6 points) &nbsp;</option>
-                                                                <option value="4">IV (7, 8, or 9 points) &nbsp;</option>
-                                                                <option value="5">V (10, 11, or 12 points) &nbsp;</option>
-                                                                <option value="6">VI (13 or more points) &nbsp;</option>
-                                                                <option value="7">Unknown (calculate here) &nbsp;</option>
+                                                            <select name="answer" id="criminalHistory">
+                                                                <option value="0">I (0 or 1 points) &nbsp;</option>
+                                                                <option value="1">II (2 or 3 points) &nbsp;</option>
+                                                                <option value="2">III (4, 5, or 6 points) &nbsp;</option>
+                                                                <option value="3">IV (7, 8, or 9 points) &nbsp;</option>
+                                                                <option value="4">V (10, 11, or 12 points) &nbsp;</option>
+                                                                <option value="5">VI (13 or more points) &nbsp;</option>
+                                                                <option value="6">Unknown (calculate here) &nbsp;</option>
                                                             </select>
                                                             <input type="hidden" id="q4616a3e9346352f3hidden" name="question" value="4616a3e9346352f3">
                                                         </form>
@@ -397,6 +397,85 @@ table#summary td.other h5 {
 
     function loadHtml(fileName, div) {
         $("#" + div).load("<?php echo base_url('forms/');  ?>" + fileName);
+    }
+
+
+    function getZone(score) {
+
+        if ( score >= 1 && score <= 8 ) {
+            return 'A';
+        }
+
+        if ( score >= 9 && score <= 11 ) {
+            return 'B';
+        }
+
+        if ( score >= 12 && score <= 13 ) {
+            return 'C';
+        }
+
+        if ( score >= 14 && score <= 43 ) {
+            return 'D';
+        }
+    }
+
+    function getHistory(history) {
+
+        switch (history) {
+            case 0:
+                return 'I';
+            case 1:
+                return 'II';
+            case 2:
+                return 'III';
+            case 3:
+                return 'IV';
+            case 4:
+                return 'V';
+            case 5:
+                return 'VI';
+            default:
+                return 'I';
+        } 
+    }
+
+    var idsArray = [];
+    var sentenceArray = [
+        [0],
+        /**************** ZONE A ***************/
+        ['0-6', '0-6', '0-6', '0-6', '0-6', '0-6'],
+        ['0-6', '0-6', '0-6', '0-6', '0-6', '1-7'],
+        ['0-6', '0-6', '0-6', '0-6', '2-8', '3-9'],
+        ['0-6', '0-6', '0-6', '2-8', '4-10', '6-12'],
+        ['0-6', '0-6', '1-7', '4-10', '6-12', '9-15'],
+        ['0-6', '1-7', '2-8', '6-12', '9-15', '12-18'],
+        ['0-6', '2-8', '4-10', '8-14', '12-18', '15-21'],
+        ['0-6', '4-10', '6-12', '10-16', '15-21', '18-24'],
+
+    ]
+
+    function getMonths(selector) {
+        var score = 0;
+        idsArray[selector.name] = selector.value;
+
+        for (var index in idsArray) {
+            score += parseInt( idsArray[index] );
+        }
+
+        score = ( score > 43 ? 43 : score );
+
+        var history = parseInt( $('#criminalHistory').val() );
+        var historyText = getHistory( history );
+
+        $('#level').html( score );
+
+        if ( sentenceArray[score][history] ) {
+            $('#sentenceMonth').html( sentenceArray[score][history] );
+        }
+
+        $('#zone').html( getZone(score) );
+
+
     }
 
 </script>
