@@ -452,6 +452,15 @@ table#summary td.other h5 {
         ['0-6', '2-8', '4-10', '8-14', '12-18', '15-21'],
         ['0-6', '4-10', '6-12', '10-16', '15-21', '18-24'],
 
+        /**************** ZONE B ***************/
+        ['4-10', '6-12', '8-14', '12-18', '18-24', '21-27'],
+        ['6-12', '8-14', '10-16', '15-21', '21-27', '24-30'],
+        ['8-14', '10-16', '12-18', '18-24', '24-30', '27-33'],
+
+        /**************** ZONE C ***************/
+        ['10-16', '12-18', '15-21', '21-27', '27-33', '30-37'],
+        ['12-18', '15-21', '18-24', '24-30', '30-37', '33-41']
+
     ]
 
     function getMonths(selector) {
@@ -468,6 +477,8 @@ table#summary td.other h5 {
         var historyText = getHistory( history );
 
         $('#level').html( score );
+
+        $('#historyText').html( historyText );
 
         if ( sentenceArray[score][history] ) {
             $('#sentenceMonth').html( sentenceArray[score][history] );
