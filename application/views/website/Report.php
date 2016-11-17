@@ -482,7 +482,7 @@ table#summary td.other h5 {
     ]
 
     function getMonths(selector) {
-        console.log('inside');
+
         var score = 0;
         idsArray[selector.name] = selector.value;
 
