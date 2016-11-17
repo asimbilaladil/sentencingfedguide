@@ -58,23 +58,23 @@ table#summary td.other h5 {
                                                             <tr>
                                                                 <td id="months">
                                                                 <h6 style="color: white;">Months:</h6>
-                                                                    <h5 id="sentenceMonth">0-6</h5>
+                                                                    <h5 id="sentenceMonth"></h5>
                                                                 </td>
                                                                 <td class="other">
                                                                     <h6>Zone:</h6>
-                                                                    <h5 id="zone" title="a sentence of imprisonment is not required">A</h5>
+                                                                    <h5 id="zone" title="a sentence of imprisonment is not required"></h5>
                                                                 </td>
                                                                 <td class="other">
                                                                     <h6>Level:</h6>
-                                                                    <h5 id="level">6</h5>
+                                                                    <h5 id="level"></h5>
                                                                 </td>
                                                                 <td class="other">
                                                                     <h6>History:</h6>
-                                                                    <h5 id="historyText">I</h5>
+                                                                    <h5 id="historyText"></h5>
                                                                 </td>
                                                                 <td class="other last">
                                                                     <h6>Fine:</h6>
-                                                                    <h5>$500 to $5,000</h5>
+                                                                    <h5>$0 to $0</h5>
                                                                 </td>
                                                             </tr>
                                                         </tbody>
