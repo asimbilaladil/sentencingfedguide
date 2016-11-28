@@ -133,6 +133,7 @@ table#summary td.other h5 {
                                                             <option value="18_2251(a)">Sexual exploitation of minors</option>
                                                             <option value="18_1343">Wire fraud</option>
                                                             <option value="2">Weapon</option>
+                                                            <option value="4">Burglary</option>
                                                         </select>
                                                         )
                                                         <input type="hidden" id="q6c261a06c5b41d0hidden" name="question" value="6c261a06c5b41d0">
