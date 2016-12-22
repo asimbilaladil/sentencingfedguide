@@ -361,6 +361,12 @@ table#summary td.other h5 {
 
     var getForm = function getForm() {
 
+        //Set result empty on new selection  
+        $('#level').html("");
+        $('#sentenceMonth').html("");
+        $('#zone').html( getZone("");
+        $('#historyText').html("");
+
         var selectBox = document.getElementById("selectBox");
         var id = selectBox[selectBox.selectedIndex].value
         $.get('<?php echo site_url('Report/getForm') ?>', {
