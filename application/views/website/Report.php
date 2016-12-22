@@ -364,7 +364,7 @@ table#summary td.other h5 {
         //Set result empty on new selection  
         $('#level').html("");
         $('#sentenceMonth').html("");
-        $('#zone').html( getZone("");
+        $('#zone').html("");
         $('#historyText').html("");
 
         var selectBox = document.getElementById("selectBox");
