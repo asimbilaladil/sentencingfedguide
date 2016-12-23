@@ -1,0 +1,49 @@
+
+
+<div class="form-group">
+    <label class="control-label col-sm-8" for="email">Is there a known base offense level for the crime which the funds where laundered?</label>
+
+        <label class="radio-inline">
+        <input  type="radio" onchange="getFormChildNode(5)"  name="Is_there_a_known_base_offense_level_for_the_crime_which_the_funds_where_laundered">Yes
+        </label>
+        <label class="radio-inline">
+        <input type="radio" onchange="getFormChildNode(6)" name="Is_there_a_known_base_offense_level_for_the_crime_which_the_funds_where_laundered">No 
+        </label>  
+        <br>
+        <div id="money_laundering">
+        </div>
+</div>
+<br>
+<div class="form-group">
+    <label class="control-label col-sm-8">Don't know the base if launderer was in the business of laundering money</label>
+    <label class="radio-inline">
+    <input value="4" type="radio" onchange="getMonths(this)" id="Don't_know_the_base_if_launderer_was_in_the_business_of_laundering_money_YES" name="t_know_the_base_if_launderer_was_in_the_business_of_laundering_money">Yes
+    </label>
+    <label class="radio-inline">
+    <input value="0" type="radio" onchange="getMonths(this)" id="t_know_the_base_if_launderer_was_in_the_business_of_laundering_money_NO" name="t_know_the_base_if_launderer_was_in_the_business_of_laundering_money">No 
+    </label>                                                        
+</div>
+<br>
+<div class="form-group">
+    <label class="control-label col-sm-8">if the launderer knew or believed it was generated from or used to promeote drugs violent crime offenses involving guns explosives or national security or the sexual exploatation of minors</label>
+    <label class="radio-inline">
+    <input value="6" type="radio" onchange="getMonths(this)" id="if_the_launderer_knew_or_believed_it_was_generated_from_or_used_to_promeote_drugs_violent_crime_offenses_involving_guns_explosives_or_national_security_or_the_sexual_exploatation_of_minors_YES" name="if_the_launderer_knew_or_believed_it_was_generated_from_or_used_to_promeote_drugs_violent_crime_offenses_involving_guns_explosives_or_national_security_or_the_sexual_exploatation_of_minors">Yes
+    </label>
+    <label class="radio-inline">
+    <input value="0" type="radio" onchange="getMonths(this)" id="if_the_launderer_knew_or_believed_it_was_generated_from_or_used_to_promeote_drugs_violent_crime_offenses_involving_guns_explosives_or_national_security_or_the_sexual_exploatation_of_minors_NO" name="if_the_launderer_knew_or_believed_it_was_generated_from_or_used_to_promeote_drugs_violent_crime_offenses_involving_guns_explosives_or_national_security_or_the_sexual_exploatation_of_minors">No 
+    </label>                                                        
+</div>
+<br><br>
+<div class="form-group">
+    <label class="control-label col-sm-8">Was the defendent convicted under 18 USC 1957?</label>
+    <label class="radio-inline">
+    <input value="1" type="radio" onchange="getMonths(this); getFormChildNode(8)" id="Was_the_defendent_convicted_under_18_USC_1957_YES" name="Was_the_defendent_convicted_under_18_USC_1957">Yes
+    </label>
+    <label class="radio-inline">
+    <input value="0" type="radio" onchange="clearHtml('sophiscated_scheme'); getMonths(this)" id="Was_the_defendent_convicted_under_18_USC_1957_NO" name="Was_the_defendent_convicted_under_18_USC_1957">No 
+    </label>   
+    <br><br>
+    <div id="sophiscated_scheme">
+    </div>
+                                                         
+</div>
