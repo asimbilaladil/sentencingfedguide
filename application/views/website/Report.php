@@ -112,28 +112,10 @@ table#summary td.other h5 {
                                                         (or, 
                                                         <select onchange="getForm()" id="selectBox" class="codepick">
                                                             <option value="" selected="selected">Pick from frequent statutes</option>
-                                                            <option value="8_1324(a)">Alien smuggling</option>
-                                                            <option value="18_2113(a)">Bank robbery</option>
-                                                            <option value="18_2119">Car jacking</option>
-                                                            <option value="18_2252">Child pornography</option>
-                                                            <option value="18_1030(a)(2)">Computer fraud</option>
-                                                            <option value="18_2319">Copyright infringement</option>
-                                                            <option value="18_471">Counterfeiting</option>
-                                                            <option value="18_1001">False statement to government agent</option>
-                                                            <option value="18_922(g)">Felon in possession of firearm</option>
-                                                            <option value="18_1951">Hobbs Act</option>
-                                                            <option value="18_2314">Interstate transport/stolen property</option>
-                                                            <option value="18_1201(a)">Kidnapping</option>
-                                                            <option value="18_1341">Mail fraud</option>
-                                                            <option value="18_1111(a)">Murder (federal jurisdiction)</option>
-                                                            <option value="18_1503">Obstruction of justice</option>
-                                                            <option value="18_1621">Perjury</option>
-                                                            <option value="21_841(a)">Possession with intent to distribute</option>
-                                                            <option value="8_1326(b)">Reentry following removal</option>
-                                                            <option value="18_2251(a)">Sexual exploitation of minors</option>
-                                                            <option value="18_1343">Wire fraud</option>
                                                             <option value="2">Weapon</option>
                                                             <option value="4">Burglary</option>
+                                                            <option value="7">Money laundering</option>
+                                                            
                                                         </select>
                                                         )
                                                         <input type="hidden" id="q6c261a06c5b41d0hidden" name="question" value="6c261a06c5b41d0">
@@ -496,7 +478,7 @@ table#summary td.other h5 {
         for (var index in idsArray) {
             score += parseInt( idsArray[index] );
         }
-
+        console.log("score",score);
         score = ( score > 43 ? 43 : score );
 
         var history = parseInt( $('#criminalHistory').val() );
@@ -515,6 +497,11 @@ table#summary td.other h5 {
 
     }
 
+    function clearHtml(div) {
+
+        $("#" + div).empty();
+
+    }
 </script>
 
 
