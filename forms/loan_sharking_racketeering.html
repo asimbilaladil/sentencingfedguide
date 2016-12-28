@@ -1,0 +1,53 @@
+<br>
+<div class="form-group col-sm-12">
+    <label class="control-label col-sm-6">Was a weapon involved?</label>
+
+        <div class="col-sm-3">
+        <select  name="weapon_involved_select" onchange="getMonths(this)" id="weapon_involved_select" class="form-control" >
+            <option value="0">No weapon</option>
+            <option value="5">Firearm was discharged</option>
+            <option value="4">Dangerous weapon used</option>
+            <option value="3">Dangerous weapon brandished</option>         
+        </select>
+
+    </div>  
+                            
+</div>
+<br>
+<div class="form-group col-sm-12">
+    <label class="control-label col-sm-6">Did the victim sustain injury?</label>
+
+        <div class="col-sm-3">
+        <select  name="sustain_injury_select" onchange="getMonths(this)" id="sustain_injury_select" class="form-control" >
+            <option value="0">No injury</option>
+            <option value="6">Life threatening injury</option>
+            <option value="5">In between</option>
+            <option value="4">Serious injury</option> 
+            <option value="2">Moderate injury</option>         
+        </select>
+
+    </div>  
+                           
+</div>
+<br>
+
+<div class="form-group col-sm-12">
+    <label class="control-label col-sm-6">Was victim physically abducted?</label>
+    <label class="radio-inline">
+    <input value="4" type="radio" onchange="getMonths(this)" id="Was_victim_physically_abducted_YES" name="Was_victim_physically_abducted">Yes
+    </label>
+    <label class="radio-inline">
+    <input value="0" type="radio" onchange="getMonths(this)" id="Was_victim_physically_abducted_NO" name="Was_victim_physically_abducted">No 
+    </label>                       
+</div>
+<br>
+
+<div class="form-group col-sm-12">
+    <label class="control-label col-sm-6">Was victim not abducted but physically restrained?</label>
+    <label class="radio-inline">
+    <input value="2" type="radio" onchange="getMonths(this)" id="Was_victim_not_abducted_but_physically_restrained_YES" name="Was_victim_not_abducted_but_physically_restrained">Yes
+    </label>
+    <label class="radio-inline">
+    <input value="0" type="radio" onchange="getMonths(this)" id="Was_victim_not_abducted_but_physically_restrained_NO" name="Was_victim_not_abducted_but_physically_restrained">No 
+    </label>                       
+</div>
