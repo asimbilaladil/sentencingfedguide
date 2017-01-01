@@ -375,7 +375,6 @@ table#summary td.other h5 {
         }, function(data) {
             data = JSON.parse(data);
             if ( data.length > 0 ) {
-                console.log(data)
                 var filename = data[0].fileName;
                 var htmlDiv = data[0].html_div_id;
                 loadHtml(filename, htmlDiv);
@@ -469,18 +468,58 @@ table#summary td.other h5 {
 /*28*/  ['78-97', '87-108', '97-121', '110-137', '130-162', '140-175'],
 /*29*/  ['87-108', '97-121', '108-135', '121-151', '140-175', '151-188'],
 /*30*/  ['97-121', '108-135', '121-151', '135-168', '151-188', '168-210'],
-    ]
+/*31*/  ['108-135', '121-151', '135-168', '151-188', '168-210', '188-235'],
+/*32*/  ['121-151', '135-168', '151-188', '168-210', '188-235', '210-262'],
+/*33*/  ['135-168', '151-188', '168-210', '188-235', '210-262', '235-293'],
+/*34*/  ['151-188', '168-210', '188-235', '235-293', '210-262', '262-327'],
+/*35*/  ['168-210', '188-235', '210-262', '235-293', '262-327', '292-365'],
+/*36*/  ['188-235', '210-262', '235-293', '262-327', '292-365', '324-405'],
+/*37*/  ['210-262', '235-293', '262-327', '292-365', '324-405', '360-life'],
+/*38*/  ['235-293', '262-327', '292-365', '324-405', '360-life', '360-life'],
+/*39*/  ['262-327', '292-365', '324-405', '360-life', '360-life', '360-life'],
+/*40*/  ['292-365', '324-405', '360-life', '360-life', '360-life', '360-life'],
+/*41*/  ['324-405', '360-life', '360-life', '360-life', '360-life', '360-life'],
+/*42*/  ['360-life', '360-life', '360-life', '360-life', '360-life', '360-life'],
+/*43*/  ['life', 'life', 'life', 'life', 'life', 'life'],
 
-    function getMonths(selector) {
+    ];
 
-        var score = 0;
+    var score = 0;
+
+    function getMonths(selector, childDiv) {
+
+        score = 0;
+
         idsArray[selector.name] = selector.value;
 
         for (var index in idsArray) {
             score += parseInt( idsArray[index] );
         }
-        console.log("score",score);
+
+        if (childDiv) {
+            var childRadioCheck = $('#' + childDiv + ' input[type=radio]:checked').attr('value');
+
+            $('#' + childDiv + ' input[type=radio]').each( function(index) {
+
+                delete idsArray[this.name];       
+
+            });            
+
+            if (childRadioCheck) {
+                childRadioCheck = parseInt(childRadioCheck);
+                score = score - childRadioCheck;
+            }
+
+            $("#" + childDiv).empty();        
+        }
+
         score = ( score > 43 ? 43 : score );
+
+        updateScoreOnView();
+
+    }
+
+    function updateScoreOnView() {
 
         var history = parseInt( $('#criminalHistory').val() );
         var historyText = getHistory( history );
@@ -493,12 +532,13 @@ table#summary td.other h5 {
             $('#sentenceMonth').html( sentenceArray[score][history] );
         }
 
-        $('#zone').html( getZone(score) );
+        console.log('score', score);
 
+        $('#zone').html( getZone(score) );
 
     }
 
-    function clearHtml(div) {
+    function clearHtml(selector, div) {
 
         $("#" + div).empty();
 
