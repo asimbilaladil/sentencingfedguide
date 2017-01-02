@@ -538,7 +538,7 @@ table#summary td.other h5 {
 
     }
 
-    function clearHtml(selector, div) {
+    function clearHtml( div) {
 
         $("#" + div).empty();
 
