@@ -1,0 +1,25 @@
+<div class="form-group col-sm-12">
+    <label class="control-label col-sm-6" for="email">Was physical force threatened or used</label>
+    <label class="radio-inline">
+    <input value="3" type="radio" onchange="getMonths(this)" name="Was_physical_force_threatened_or_used" id="Was_physical_force_threatened_or_used_YES" >Yes
+    </label>
+    <label class="radio-inline">
+    <input value="0" type="radio" onchange="getMonths(this)" name="Was_physical_force_threatened_or_used" id="Was_physical_force_threatened_or_used_NO" >No 
+    </label>                                                        
+</div>
+
+
+<div class="form-group  col-sm-12">
+    <label class="control-label col-sm-6" for="email">Was there an injury</label>
+    <label class="radio-inline">
+    <input value="4" type="radio" onchange="getMonths(this); getFormChildNode(19)" name="Was_there_an_injury" id="Was_there_an_injury_YES" >Yes
+    </label>
+    <label class="radio-inline">
+    <input value="0" type="radio" onchange="getMonths(this); clearHtml('Was_there_an_injury')" name="Was_there_an_injury" id="Was_there_an_injury_NO" >No 
+    </label>  
+ 
+                                                      
+</div>
+<br>
+<div id="Was_there_an_injury">
+</div> 

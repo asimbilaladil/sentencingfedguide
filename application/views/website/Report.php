@@ -116,6 +116,7 @@ table#summary td.other h5 {
                                                             <option value="4">Burglary</option>
                                                             <option value="7">Money laundering</option>
                                                             <option value="9">Racketeering</option>
+                                                            <option value="15">Assault</option>
                                                             
                                                         </select>
                                                         )
