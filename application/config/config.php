@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 //production
-$config['base_url'] = 'http://sentencingfedguide.com/';
+$config['base_url'] = 'http://localhost:8081/sentencingfedguide';
 
 //development
 //$config['base_url'] = 'http://localhost/sentencingfedguide';

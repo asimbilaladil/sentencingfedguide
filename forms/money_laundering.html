@@ -37,10 +37,10 @@
 <div class="form-group">
     <label class="control-label col-sm-8">Was the defendent convicted under 18 USC 1957?</label>
     <label class="radio-inline">
-    <input value="1" type="radio" onchange="getMonths(this); getFormChildNode(8)" id="Was_the_defendent_convicted_under_18_USC_1957_YES" name="Was_the_defendent_convicted_under_18_USC_1957">Yes
+    <input value="1" type="radio" onchange="getFormChildNode(8); getMonths(this);" id="Was_the_defendent_convicted_under_18_USC_1957_YES" name="Was_the_defendent_convicted_under_18_USC_1957">Yes
     </label>
     <label class="radio-inline">
-    <input value="0" type="radio" onchange="clearHtml('sophiscated_scheme'); getMonths(this)" id="Was_the_defendent_convicted_under_18_USC_1957_NO" name="Was_the_defendent_convicted_under_18_USC_1957">No 
+    <input value="0" type="radio" onchange="getMonths(this, 'sophiscated_scheme')" id="Was_the_defendent_convicted_under_18_USC_1957_NO" name="Was_the_defendent_convicted_under_18_USC_1957">No 
     </label>   
     <br><br>
     <div id="sophiscated_scheme">

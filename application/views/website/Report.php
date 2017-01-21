@@ -369,27 +369,6 @@ table#summary td.other h5 {
 
     }
     
-    var getFormChildNode = function getFormChildNode(id) {
-        
-        $.get('<?php echo site_url('Report/getForm') ?>', {
-            id : id
-        }, function(data) {
-            data = JSON.parse(data);
-            if ( data.length > 0 ) {
-                var filename = data[0].fileName;
-                var htmlDiv = data[0].html_div_id;
-                loadHtml(filename, htmlDiv);
-
-            }
-        });  
-
-    }
-
-    function loadHtml(fileName, div) {
-        $("#" + div).load("<?php echo base_url('forms/');  ?>" + fileName);
-    }
-
-
     function getZone(score) {
 
         if ( score >= 1 && score <= 8 ) {
@@ -429,6 +408,7 @@ table#summary td.other h5 {
         } 
     }
 
+    
     var idsArray = [];
     var sentenceArray = [
         [0],
@@ -485,11 +465,11 @@ table#summary td.other h5 {
 
     ];
 
-    var score = 0;
+    
 
     function getMonths(selector, childDiv) {
 
-        score = 0;
+        var score = 0;
 
         idsArray[selector.name] = selector.value;
 
@@ -499,12 +479,11 @@ table#summary td.other h5 {
 
         if (childDiv) {
             var childRadioCheck = $('#' + childDiv + ' input[type=radio]:checked').attr('value');
-
+            
             $('#' + childDiv + ' input[type=radio]').each( function(index) {
-
                 delete idsArray[this.name];       
+            });
 
-            });            
 
             if (childRadioCheck) {
                 childRadioCheck = parseInt(childRadioCheck);
@@ -516,11 +495,11 @@ table#summary td.other h5 {
 
         score = ( score > 43 ? 43 : score );
 
-        updateScoreOnView();
+        updateScoreOnView(score);
 
     }
 
-    function updateScoreOnView() {
+    function updateScoreOnView(score) {
 
         var history = parseInt( $('#criminalHistory').val() );
         var historyText = getHistory( history );
@@ -538,6 +517,32 @@ table#summary td.other h5 {
         $('#zone').html( getZone(score) );
 
     }
+
+
+    var getFormChildNode = function getFormChildNode(id) {
+        
+        $.get('<?php echo site_url('Report/getForm') ?>', {
+            id : id
+        }, function(data) {
+            data = JSON.parse(data);
+            if ( data.length > 0 ) {
+                var filename = data[0].fileName;
+                var htmlDiv = data[0].html_div_id;
+                loadHtml(filename, htmlDiv);
+
+            }
+        });  
+
+    }
+
+    function resetList() {
+        idsArray = [];
+    }
+
+    function loadHtml(fileName, div) {
+        $("#" + div).load("<?php echo base_url('forms/');  ?>" + fileName);
+    }
+
 
     function clearHtml( div) {
 
