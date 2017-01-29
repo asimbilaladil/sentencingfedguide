@@ -117,6 +117,13 @@ table#summary td.other h5 {
                                                             <option value="7">Money laundering</option>
                                                             <option value="9">Racketeering</option>
                                                             <option value="15">Assault</option>
+                                                            <option value="20">Eavesdropping Device</option>
+                                                            <option value="21">Manufacturing Eavesdropping Device</option>
+                                                            <option value="22">Election</option>
+                                                            <option value="23">Involuntary Servitude</option>
+                                                            <option value="24">Obstructing Mail</option>
+                                                            <option value="25">Migrant Workers</option>
+                                                            <option value="26">Witness Tampering</option>
                                                             
                                                         </select>
                                                         )
