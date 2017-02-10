@@ -109,7 +109,7 @@ table#summary td.other h5 {
                                                         <span>U.S.C. §</span>
                                                         <input class="noblur" type="text" name="answersection" id="q6c261a06c5b41d0section" size="10">
                                                         <input type="submit" id="q6c261a06c5b41d0submit" name="q6c261a06c5b41d0submit" value="OK">
-                                                        (or, 
+
                                                         <select onchange="getForm()" id="selectBox" class="codepick">
                                                             <option value="" selected="selected">Pick from frequent statutes</option>
                                                             <option value="2">Weapon</option>
@@ -126,7 +126,17 @@ table#summary td.other h5 {
                                                             <option value="26">Witness Tampering</option>
                                                             
                                                         </select>
-                                                        )
+                                                        <div class="col-md-12" style="text-align: center;">
+                                                            <a onclick="getForm(4)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/4.png") ?>"></div></a>
+                                                            <a onclick="getForm(7)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/7.png") ?>"></div></a>
+                                                            <a onclick="getForm(15)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/15.png") ?>"></div></a>
+                                                        </div>
+                                                        <div class="col-md-12" style="text-align: center;">
+                                                            <a onclick="getForm(9)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/9.png") ?>"></div></a>
+                                                            <a onclick="getForm(22)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/22.png") ?>"></div></a>
+                                                            
+                                                        </div>                                                        
+                                                        
                                                         <input type="hidden" id="q6c261a06c5b41d0hidden" name="question" value="6c261a06c5b41d0">
                                                     </form>
                                                 </div>    
@@ -350,7 +360,7 @@ table#summary td.other h5 {
 
     }
 
-    var getForm = function getForm() {
+    var getForm = function getForm(id) {
 
         //Set result empty on new selection  
         $('#level').html("");
@@ -358,8 +368,8 @@ table#summary td.other h5 {
         $('#zone').html("");
         $('#historyText').html("");
 
-        var selectBox = document.getElementById("selectBox");
-        var id = selectBox[selectBox.selectedIndex].value
+        //var selectBox = document.getElementById("selectBox");
+        //var id = selectBox[selectBox.selectedIndex].value
         $.get('<?php echo site_url('Report/getForm') ?>', {
             id : id
         }, function(data) {
