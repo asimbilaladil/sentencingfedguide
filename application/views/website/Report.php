@@ -134,8 +134,16 @@ table#summary td.other h5 {
                                                         <div class="col-md-12" style="text-align: center;">
                                                             <a onclick="getForm(9)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/9.png") ?>"></div></a>
                                                             <a onclick="getForm(22)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/22.png") ?>"></div></a>
+                                                            <a onclick="getForm(2)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/2.png") ?>"></div></a>
                                                             
-                                                        </div>                                                        
+                                                        </div>        
+                                                        <div class="col-md-12" style="text-align: center;">
+                                                            <a onclick="getForm(24)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/24.png") ?>"></div></a>
+                                                            <a onclick="getForm(25)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/25.png") ?>"></div></a>
+                                                            <a onclick="getForm(26)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/26.png") ?>"></div></a>
+                                                            
+                                                        </div>
+
                                                         
                                                         <input type="hidden" id="q6c261a06c5b41d0hidden" name="question" value="6c261a06c5b41d0">
                                                     </form>
