@@ -105,10 +105,10 @@ table#summary td.other h5 {
                                                     <form method="POST" action="/dynamic/" name="q6c261a06c5b41d0form" id="q6c261a06c5b41d0form" class="question context6c57" style="display: block;">
                                                         <label for="q6c261a06c5b41d0title">What is the offense of conviction?</label>
                                                         <br>
-                                                        <input class="noblur" type="text" name="answertitle" value="18" id="q6c261a06c5b41d0title" size="3">
-                                                        <span>U.S.C. §</span>
-                                                        <input class="noblur" type="text" name="answersection" id="q6c261a06c5b41d0section" size="10">
-                                                        <input type="submit" id="q6c261a06c5b41d0submit" name="q6c261a06c5b41d0submit" value="OK">
+                                                        <input style="display: none;" class="noblur" type="text" name="answertitle" value="18" id="q6c261a06c5b41d0title" size="3">
+                                                        <span style="display: none;" >U.S.C. §</span>
+                                                        <input style="display: none;" class="noblur" type="text" name="answersection" id="q6c261a06c5b41d0section" size="10">
+                                                        <input style="display: none;" type="submit" id="q6c261a06c5b41d0submit" name="q6c261a06c5b41d0submit" value="OK">
 
                                                         <select style="display: none;" onchange="getForm()" id="selectBox" class="codepick">
                                                             <option value="" selected="selected">Pick from frequent statutes</option>
