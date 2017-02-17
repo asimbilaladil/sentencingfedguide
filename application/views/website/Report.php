@@ -110,7 +110,7 @@ table#summary td.other h5 {
                                                         <input class="noblur" type="text" name="answersection" id="q6c261a06c5b41d0section" size="10">
                                                         <input type="submit" id="q6c261a06c5b41d0submit" name="q6c261a06c5b41d0submit" value="OK">
 
-                                                        <select onchange="getForm()" id="selectBox" class="codepick">
+                                                        <select style="display: none;" onchange="getForm()" id="selectBox" class="codepick">
                                                             <option value="" selected="selected">Pick from frequent statutes</option>
                                                             <option value="2">Weapon</option>
                                                             <option value="4">Burglary</option>
