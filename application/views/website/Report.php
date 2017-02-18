@@ -48,19 +48,22 @@ table#summary td.other h5 {
                                 <div class="row">
                                     <div class="col-md-1">
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10" >
                                         <aside class="sidebar">
-                                            <div class="widget">
-                                                <h4 class="widget-title">Output</h4>
+                                            <div class="widget" style="position: fixed;top: 0px;z-index: 500;width: 75.7%;background: white;margin-left: -28px;">
+                                                <h4 class="widget-title"><br>Output</h4>
                                                 <div id="reportspot">
-                                                    <table id="summary">
+        
+                                          
+
+                                                    <table id="summary" >
                                                         <tbody>
                                                             <tr>
                                                                 <td id="months">
                                                                 <h6 style="color: white;">Months:</h6>
                                                                     <h5 id="sentenceMonth"></h5>
                                                                 </td>
-                                                                <td class="other">
+                                                                <td style="display: none;" class="other">
                                                                     <h6>Zone:</h6>
                                                                     <h5 id="zone" title="a sentence of imprisonment is not required"></h5>
                                                                 </td>
@@ -68,11 +71,11 @@ table#summary td.other h5 {
                                                                     <h6>Level:</h6>
                                                                     <h5 id="level"></h5>
                                                                 </td>
-                                                                <td class="other">
+                                                                <td style="display: none;" class="other">
                                                                     <h6>History:</h6>
                                                                     <h5 id="historyText"></h5>
                                                                 </td>
-                                                                <td class="other last">
+                                                                <td style="display: none;" class="other last">
                                                                     <h6>Fine:</h6>
                                                                     <h5>$0 to $0</h5>
                                                                 </td>
