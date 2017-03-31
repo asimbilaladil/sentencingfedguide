@@ -148,6 +148,8 @@ table#summary td.other h5 {
                                                         </div>                            
                                                         <div class="col-md-12" style="text-align: center;">
                                                             <a onclick="getForm(20)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/20.png") ?>"></div></a>
+                                                            <a onclick="getForm(27)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/27.png") ?>"></div></a>
+                                                             <a onclick="getForm(28)"><div class="col-md-4"><img style="width: 50%; height: 100px" src="<?php echo base_url("assets/images/28.png") ?>"></div></a> 
                                                            
                                                             
                                                         </div>
